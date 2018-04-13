@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1522954090 source:c:\users\facun\desktop\tp\tp1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"operaciones.h"
+
+1522948078 source:c:\users\facun\desktop\tp\tp1\operaciones.c
+
+1522944041 c:\users\facun\desktop\tp\tp1\operaciones.h
+
+1523653328 source:c:\users\facun\desktop\frey\tp1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"operaciones.h"
+
+1523653308 c:\users\facun\desktop\frey\tp1\operaciones.h
+
+1523653308 source:c:\users\facun\desktop\frey\tp1\operaciones.c
+
