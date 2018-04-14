@@ -1,21 +1,53 @@
+/** \brief Suma dos enteros
+ *
+ * \param n1 int Primer entero
+ * \param n2 int Segundo entero
+ * \param resultado float* Suma
+ * \return int
+ *
+ */
 int suma(int n1,int n2,float* resultado)
 {
     *resultado=n1+n2;
     return 0;
 }
 
+/** \brief Resta dos enteros
+ *
+ * \param n1 int Primer entero
+ * \param n2 int Segundo entero
+ * \param resultado float* Resta
+ * \return int
+ *
+ */
 int resta(int n1,int n2,float* resultado)
 {
     *resultado=n1-n2;
     return 0;
 }
 
+/** \brief Multiplica dos enteros
+ *
+ * \param n1 int Primer entero
+ * \param n2 int Segundo entero
+ * \param resultado float* Multiplicación
+ * \return int
+ *
+ */
 int multiplicacion(int n1,int n2,float* resultado)
 {
     *resultado=n1*n2;
     return 0;
 }
 
+/** \brief Divide dos enteros
+ *
+ * \param n1 int Primer entero
+ * \param n2 int Segundo entero
+ * \param resultado float* División
+ * \return int Devuelve -1 en caso de error
+ *
+ */
 int division(int n1,int n2,float* resultado)
 {
     float division;;
@@ -25,6 +57,13 @@ int division(int n1,int n2,float* resultado)
     return 0;
 }
 
+/** \brief Calcula el factorial de un número entero
+ *
+ * \param n1 int Número a calcular
+ * \param resultado float* Factorial
+ * \return int Devuelve -1 en caso de error
+ *
+ */
 int factorial(int n1,float*resultado)
 {
     if(n1<0||n1>=35) return -1;
