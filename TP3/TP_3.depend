@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1527904918 source:c:\users\facun\desktop\frey\tp3\tp_3_cascara\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525919326 c:\users\facun\desktop\frey\tp3\tp_3_cascara\utn.h
+
+1527906449 source:c:\users\facun\desktop\frey\tp3\tp_3_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"utn.h"
+
+1527906378 c:\users\facun\desktop\frey\tp3\tp_3_cascara\funciones.h
+
+1527907234 source:c:\users\facun\desktop\frey\tp3\tp_3_cascara\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"utn.h"
+
