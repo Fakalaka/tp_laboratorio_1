@@ -23,3 +23,38 @@
 	"funciones.h"
 	"utn.h"
 
+1527904918 source:c:\users\facun\desktop\frey\tp3\tp3\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525919326 c:\users\facun\desktop\frey\tp3\tp3\utn.h
+
+1529087653 source:c:\users\facun\desktop\frey\tp3\tp3\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1528898649 c:\users\facun\desktop\frey\tp3\tp3\arraylist.h
+
+1529090084 source:c:\users\facun\desktop\frey\tp3\tp3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"utn.h"
+	"ArrayList.h"
+
+1529089989 c:\users\facun\desktop\frey\tp3\tp3\funciones.h
+	"ArrayList.h"
+
+1529089989 source:c:\users\facun\desktop\frey\tp3\tp3\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"utn.h"
+	"ArrayList.h"
+

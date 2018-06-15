@@ -1,5 +1,6 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
+#include "ArrayList.h"
 
 typedef struct{
     char titulo[50];
@@ -8,20 +9,19 @@ typedef struct{
     char descripcion[100];
     int puntaje;
     char linkImagen[500];
-    int id;
 }Movie;
 
 /**
  *  Agrega una pelicula al archivo binario
  *  @param movie el puntero de la estructura a ser agregada al archivo
- *  @return retorna 1 o 0 de acuerdo a si pudo agregar la pelicula o no
+ *  @return devuelve 1 o 0 de acuerdo a si pudo agregar la pelicula o no
  */
 int agregarPelicula(Movie* movie);
 
 /**
  *  Borra una pelicula del archivo binario
  *  @param movie el puntero de la estructura a ser eliminada al archivo
- *  @return retorna 1 o 0 de acuerdo a si pudo eliminar la pelicula o no
+ *  @return devuelve 1 o 0 de acuerdo a si pudo eliminar la pelicula o no
  */
 int borrarPelicula(Movie* movie);
 
@@ -30,36 +30,85 @@ int borrarPelicula(Movie* movie);
  *  @param lista la lista de peliculas a ser agregadas en el archivo.
  *  @param nombre el nombre para el archivo.
  */
-void generarPagina(Movie** arrayMovie, char nombre[],int cantidadActual);
+void generarPagina(ArrayList* arrayMovie, char* nombre);
 
+/** \brief Encuentra un espacio de memoria para la pelicula
+ *
+ * \return Movie* direccion del elemento
+ *
+ */
 Movie* movie_new();
+
+/** \brief Libera el espacio de memoria reservado
+ *
+ * \param this Movie* pelicula a borrar
+ * \return void
+ *
+ */
 void movie_delete(Movie* this);
-Movie* movie_newP(char* titulo,char* genero,int duracion,char* descripcion,int puntaje,char* linkImagen,int id);
-int movie_agregar(Movie** arrayMovie,int* cantidadActual,int cantidadMax);
-Movie* buscarPorId(Movie** arrayMovie,int id,int cantidadActual);
-int movie_borrar(Movie** arrayMovie,int* cantidadActual);
-int movie_modificar(Movie** arrayMovie,int* cantidadActual);
-int movie_mostrar(Movie** arrayMovie,int cantidadActual);
-int movie_read(Movie** arrayMovie,int* cantidadActual,int cantidadMax);
-int movie_init(Movie** arrayMovie,int cantidadMax);
 
-/** \brief
+/** \brief Genera una pelicula dados todos sus campos
  *
- * \param this Movie*
- * \param id int
+ * \param titulo char*
+ * \param genero char*
+ * \param duracion int
+ * \param descripcion char*
+ * \param puntaje int
+ * \param linkImagen char*
+ * \return Movie* elemento generado
+ *
+ */
+Movie* movie_newP(char* titulo,char* genero,int duracion,char* descripcion,int puntaje,char* linkImagen);
+
+/** \brief Pide los datos y añade una pelicula al ArrayList
+ *
+ * \param arrayMovie ArrayList* lista de peliculas
+ * \return int -1 si hubo error, 0 si OK
+ *
+ */
+int movie_agregar(ArrayList* arrayMovie);
+
+/** \brief Sobreescribe los datos de una pelicula de la lista
+ *
+ * \param arrayMovie ArrayList* lista de peliculas
+ * \param index int indice de la pelicula
+ * \return int -1 si el indice no existe, 0 si OK
+ *
+ */
+int movie_modificar(ArrayList* arrayMovie,int index);
+
+/** \brief Imprime la lista de peliculas
+ *
+ * \param arrayMovie ArrayList* lista de peliculas
+ * \return int -1 si la lista esta vacia, 0 si OK
+ *
+ */
+int movie_mostrar(ArrayList* arrayMovie);
+
+/** \brief Lee y carga la lista de peliculas de un archivo binario
+ *
+ * \param arrayMovie ArrayList* lista de peliculas
  * \return int
  *
  */
-int movie_setId(Movie* this, int id);
+int movie_read(ArrayList* arrayMovie);
 
-/** \brief
+/** \brief Guarda la lista de peliculas en un archivo binario
  *
- * \param this Movie*
- * \param id int*
+ * \param arrayMovie ArrayList* lista de peliculas
  * \return int
  *
  */
-int movie_getId(Movie* this,int* id);
+int movie_write(ArrayList* arrayMovie);
+
+/** \brief Compara los puntajes de dos peliculas
+ *
+ * \param peli1 void* Pelicula 1
+ * \param peli2 void* Pelicula 2
+ * \return int 1 si el puntaje de la primera es mayor, -1 si es menor, 0 si son iguales
+ *
+ */
+int movie_compararPuntaje(void* peli1, void* peli2);
 
 /** \brief
  *
